@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="POST">
+    {{form}}{% csrf_token %}
+    <button type="submit">제출</button>
+    <a href="">저장하기</a>
+    <a href="">취소</a>
+  </body>
+</html>

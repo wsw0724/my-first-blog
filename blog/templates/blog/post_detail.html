@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block block1 %}
+    <hr>
+    <p></p>
+    <p>title:{{post.title}} text: {{post.text}} created_date: {{post.created_date}}</p>
+    <hr>
+    <a href="{% url 'post_list3' %}">목록으로 가기</a>
+    <a href="{% url 'post_detail' pk=prev %}">이전글</a>
+    <a href="{% url 'post_detail' pk=next %}">다음글</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block block1 %}
+<link rel="stylesheet" href="{% static 'django_css.css' %}">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{% static 'ka1.jpg' %}" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1> 
+      <p>Architect & Engineer</p> 
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block block1 %}
+    <hr>
+    <p></p>
+    {% for i in post %}
+    <p><a href="{% url 'post_detail' pk=i.pk %}">title:{{i.title}}</a></p>
+    <p> test: {{i.text}}</p>
+    <hr>
+    {% endfor %}
+{% endblock %}

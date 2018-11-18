@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-header">
+        {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}">글쓰기</a>
+            
+            <p>Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+        {% else %}
+            <a href="{% url 'login' %}" ><span>로그인하세요</span></a>
+        {% endif %}
+        <h1><a href="/">우상욱의 블로그</a></h1>
+    </div>
+    <a href="/">1페이지로 가기 </a>
+    <a href="2">2페이지로 가기 </a>
+    <a href="3">3페이지로 가기 </a><br>
+
+    --------------------------------<br>
+    {% block block1 %}
+    {% endblock %}
+
+    --------------------------------<br>
+    
+    <!-- post_list.html에는 플립카드  -->
+    <!-- post_list2.html에는 django_img.jpg  -->
+    <!-- post_list3.html에는 title 데이터 표시  -->
+
+    <!--글쓰기 버튼 클릭 -> 글쓰기 페이지 생성 -> 저장 -> 글목록에 추가 및 출력-->
+    <!--URL 설계 (....../new)
+    views.py수정 탬플릿 연결-->
+</body>
+</html>
+<!--<a href="{ url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>-->
